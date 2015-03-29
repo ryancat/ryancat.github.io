@@ -5,13 +5,11 @@ url: testurl
 
 This the third post, check it out!
 
-```javascript
-    var a 
-```
+`var a`
 
 {% highlight javascript %}
 var abc = function () {
-    
+
 }
 {% endhighlight %}
 
@@ -23,7 +21,7 @@ The title is: {{ page.title }}
 
 Link to the first post: [Link]({% post_url 2014-09-26-welcome-to-jekyll %})
 
-Site URL [Site url]({{ site.url }}) 
+Site URL [Site url]({{ site.url }})
 
 {% highlight ruby linenos %}
 def show

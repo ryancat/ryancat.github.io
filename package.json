@@ -1,0 +1,26 @@
+{
+  "name": "ryancat.github.io",
+  "version": "1.0.0",
+  "description": "Personal blog written in jekyll",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryancat/ryancat.github.io.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "Ryan Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryancat/ryancat.github.io/issues"
+  },
+  "homepage": "https://github.com/ryancat/ryancat.github.io",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.8.0"
+  }
+}

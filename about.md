@@ -1,11 +1,9 @@
 ---
 layout: page
-title: About
+title: About Ryan
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+I grow up in China, went to Yani at Yunnan province in China for teaching assistant, ride to Lhasa from Chengdu at year 2011, had a lot fun in college at Shanghai Jiao Tong University and University of California, San Diego, Worked at Pasadena, and now in Bay area. I am a front end developer.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+![photos]({{site.url}}/assets/yani.jpg)
