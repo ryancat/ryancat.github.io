@@ -4,7 +4,8 @@ email: xryanchen@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Bamboo shoots are young, vibrant, and yammy!
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+# url: "http://ryancat.github.io" # the base hostname & protocol for your site
+url: "http://localhost:4000" # the base hostname & protocol for your site
 twitter_username: xryanchen
 github_username:  ryancat
 
