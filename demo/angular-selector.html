@@ -1,0 +1,132 @@
+<!doctype html>
+<html ng-app="demo">
+<head>
+
+	<meta charset="utf-8">
+
+	<title>angular-selector demo</title>
+
+	<link rel="stylesheet" href="../bower_components/angular-selector/build/angular-selector.css">
+
+	<style>
+
+		strong {
+			font-size: 18px;
+		}
+
+	</style>
+
+</head>
+<body ng-controller="mainCtrl">
+
+	<div>
+		<rc-angular-selector
+			select-options="selectOptions"
+			selections="selections1"
+			prefix-search-results="prefixSearchResults"
+			default-selections="prefixSearchResults[1]"
+			multiple="true"></rc-angular-selector>
+	</div>
+
+	<!-- <div>
+		<span class="angular-selector-label selector-type pull-left">Advertiser:</span>
+		<angular-selector
+			selections="selections2"
+			search-url="searchUrl"
+			search-params="searchParams"
+			is-disabled="true"
+			session="userSession"
+			multiple="true"
+			typeahead="true"
+			tolerance="5"></angular-selector>
+	</div> -->
+
+	<!-- <div>
+		<span class="angular-selector-label selector-type pull-left">Publisher:</span>
+		<angular-selector
+			selections="selections3"
+			search-url="searchUrl"
+			search-params="searchParams"
+			result-keys="resultKeys"></angular-selector>
+	</div> -->
+
+	<strong>Your selection is: {{ selections1 }} {{ selections2 }}</strong>
+
+	<!-- <div test-class></div> -->
+
+	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../bower_components/spin.js/spin.js"></script>
+	<script src="../bower_components/angular-spinner/angular-spinner.js"></script>
+
+	<script src="../bower_components/angular-selector/build/angular-selector.js"></script>
+	<script>
+
+		angular
+		.module('demo', ['rc/angularSelector'])
+		.controller('mainCtrl', function ($scope) {
+
+			$scope.selections1 = [];
+
+			$scope.selections2 = [];
+
+			$scope.searchUrl = '/jax/getMarketsBySearchString';
+
+			$scope.searchParams = {
+				limit: 20,
+				offset: 0
+			};
+
+			// The resultMap are used to map the customized
+			// results to our starndard, id/text selections
+			$scope.resultMap = ['markets', {
+				id: 'id',
+				text: 'text'
+			}];
+
+			$scope.userSession = {
+				name: 'Ryan',
+				id: '123',
+				homeMarket: '1'
+			};
+
+			$scope.prefixSearchResults = [
+				{
+					"id": "53f398fc7d20b33d121f1e",
+					"text": "Prefix selection 1"
+				},
+				{
+					"id": "53f398fc14d2fa83c0e42",
+					"text": "Prefix selection 2"
+				},
+				{
+					"id": "53ffc6a78ab35b5a96285",
+					"text": "Prefix selection 3"
+				}];
+
+			$scope.defaultSelections = $scope.prefixSearchResults[2];
+
+			$scope.selectOptions = [
+			  {
+			    "id": "53f398fc7d20b34e3d121f1e",
+			    "text": "Vilma"
+			  },
+			  {
+			    "id": "53f398fc14d2fa83cf810e42",
+			    "text": "Sullivan"
+			  },
+			  {
+			    "id": "53f398fc6a78ab35b5a96285",
+			    "text": "Francis"
+			  },
+			  {
+			    "id": "53f398fce606c55317269fef",
+			    "text": "Ann"
+			  }];
+
+			// $scope.selections = turnSelectorDataService.getSelections();
+		});
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+/**
+ * Colors
+ */
+/**
+ * Dementions
+ */
+/**
+ * Imports
+ */
+/**
+ * Shared
+ */
+.rc-clearfix {
+  *zoom: 1; }
+  .rc-clearfix:before, .rc-clearfix:after {
+    display: table;
+    content: "";
+    line-height: 0; }
+  .rc-clearfix:after {
+    clear: both; }
+
+.rc-pull-left {
+  float: left; }
+
+.rc-pull-right {
+  float: right; }
+
+.rc-icon {
+  display: inline-block; }
+
+.rc-icon-cancel-circle {
+  width: 0.8em;
+  height: 0.8em; }
+
+/**
+ * The labels when in normal mode (not editing)
+ */
+.rc-angular-selector-label {
+  font-size: 13px;
+  height: 31px;
+  line-height: 31px; }
+  .rc-angular-selector-label.selector-type {
+    display: block;
+    margin-left: 5px;
+    padding-right: 3px; }
+  .rc-angular-selector-label.selector-result {
+    border-radius: 5px;
+    margin-left: 3px;
+    padding: 1px 0; }
+
+/**
+ * The angular-selector-input directive wrapper
+ */
+.rc-angular-selector-input-wrapper {
+  max-width: 600px; }
+  .rc-angular-selector-input-wrapper:not(.has-selection) {
+    width: 170px; }
+  .rc-angular-selector-input-wrapper.has-selection.is-multiple {
+    min-width: 170px; }
+
+/**
+ * The overlay
+ */
+.rc-angular-selector-input-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: not-allowed;
+  z-index: 100; }
+
+/**
+ * The shared style for search input box
+ */
+.rc-angular-selector-input {
+  position: relative;
+  border: 1px solid;
+  border-radius: 4px; }
+  .rc-angular-selector-input .rc-angular-selector-selections {
+    margin: 0; }
+  .rc-angular-selector-input li {
+    list-style: none; }
+
+/**
+ * The selected items
+ */
+.rc-angular-selector-selections {
+  margin-bottom: 0;
+  padding: 1px 3px;
+  cursor: text;
+  border-radius: 4px; }
+  .rc-angular-selector-selections span {
+    color: #FFF;
+    font-size: 12px;
+    text-align: left;
+    line-height: 25px; }
+  .rc-angular-selector-selections .rc-angular-selector-selection {
+    background-color: #888;
+    font-family: Arial;
+    border-radius: 3px;
+    height: 25px;
+    cursor: default;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0 5px; }
+    .rc-angular-selector-selections .rc-angular-selector-selection.is-multiple {
+      width: inherit;
+      margin: 1px; }
+      .rc-angular-selector-selections .rc-angular-selector-selection.is-multiple span {
+        float: left; }
+  .rc-angular-selector-selections .rc-remove-icon {
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px; }
+    .rc-angular-selector-selections .rc-remove-icon .rc-icon-cancel-circle {
+      color: #E6E6E6;
+      fill: currentColor; }
+    .rc-angular-selector-selections .rc-remove-icon:hover .rc-icon-cancel-circle {
+      color: #FFF;
+      fill: currentColor; }
+  .rc-angular-selector-selections .rc-angular-selector-search-field {
+    position: relative;
+    overflow: hidden; }
+  .rc-angular-selector-selections input[type="text"] {
+    background: 0 0;
+    border: 0 none;
+    box-shadow: none;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    width: 10px;
+    height: 25px;
+    line-height: 25px; }
+    .rc-angular-selector-selections input[type="text"]:focus {
+      outline: 0;
+      border: 0 none;
+      box-shadow: none;
+      width: 100%; }
+
+/**
+ * The selector result panel
+ */
+.rc-angular-selector-search-results-wrapper {
+  position: absolute;
+  width: 100%;
+  z-index: 9999; }
+
+.rc-angular-selector-search-results {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow-y: auto;
+  border-radius: 4px; }
+  .rc-angular-selector-search-results .rc-angular-selector-search-results-menu {
+    background-color: white; }
+  .rc-angular-selector-search-results ul {
+    padding: 0; }
+  .rc-angular-selector-search-results hr {
+    margin-top: 0;
+    margin-bottom: 10px; }
+  .rc-angular-selector-search-results li {
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer; }
+    .rc-angular-selector-search-results li.is-highlighted {
+      background-color: #37A0CE;
+      color: white; }
