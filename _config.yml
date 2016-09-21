@@ -10,13 +10,14 @@ twitter_username: xryanchen
 github_username:  ryancat
 
 # Build settings
-markdown: kramdown
+# markdown: kramdown
 
 # Build defaults
 defaults:
-    -
-        scope:
-            path: ""
-            type: "posts"
-        values:
-            layout: "post"
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "default"
+      author: "Ryan Chen"

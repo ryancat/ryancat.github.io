@@ -20,7 +20,7 @@ module.exports = (grunt) ->
 				files:[{
 					expand: true
 					cwd: './posts'
-					src: '*.markdown'
+					src: '*.md'
 					dest: './_posts/'
 					rename: (dest, src) ->
 						"#{dest}#{getDateStr()}-#{src}"
