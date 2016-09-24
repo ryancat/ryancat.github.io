@@ -1,23 +1,22 @@
-# Site settings
-title: Bamboo Shoots
-email: xryanchen@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Bamboo shoots are young, vibrant, and yammy!
-baseurl: "" # the subpath of your site, e.g. /blog/
-# url: "http://ryancat.github.io" # the base hostname & protocol for your site
-url: "http://localhost:4000" # the base hostname & protocol for your site
-twitter_username: xryanchen
-github_username:  ryancat
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
 
-# Build settings
-# markdown: kramdown
+# Setup
+title:               Life is short
+tagline:             'This doodler'
+description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:                 http://ryancat.github.io
+baseurl:             ''
+paginate:            2
 
-# Build defaults
-defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-      type: "posts"
-    values:
-      layout: "default"
-      author: "Ryan Chen"
+# About/contact
+author:
+  name:              Ryan Chen
+  url:               https://www.linkedin.com/in/xchan
+  email:             xryanchen@gmail.com
+
+# Custom vars
+version:             1.0.0
