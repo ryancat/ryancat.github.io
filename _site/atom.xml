@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Life is short</title>
- <link href="http://ryancat.github.io/atom.xml" rel="self"/>
- <link href="http://ryancat.github.io/"/>
- <updated>2016-09-24T00:51:40-07:00</updated>
- <id>http://ryancat.github.io</id>
+ <link href="http://localhost/atom.xml" rel="self"/>
+ <link href="http://localhost/"/>
+ <updated>2016-09-25T10:42:37-07:00</updated>
+ <id>http://localhost</id>
  <author>
    <name>Ryan Chen</name>
    <email>xryanchen@gmail.com</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>预知梦</title>
-   <link href="http://ryancat.github.io/chinese%20%E4%B9%A6%E8%AF%84/2016/09/24/%E9%A2%84%E7%9F%A5%E6%A2%A6/"/>
+   <link href="http://localhost/2016/09/24/%E9%A2%84%E7%9F%A5%E6%A2%A6.html"/>
    <updated>2016-09-24T00:00:00-07:00</updated>
-   <id>http://ryancat.github.io/chinese%20%E4%B9%A6%E8%AF%84/2016/09/24/预知梦</id>
+   <id>http://localhost/2016/09/24/预知梦</id>
    <content type="html">&lt;p&gt;读短篇小说的确没有中长篇的快感，尤其是短篇推理小说。不过这本书中的短篇仍然很值得一看，东野圭吾这本书的五个短篇基本上都遵循了一致的脉络 —— 从开始的事件简述，到警察的介入调查，然后发现鬼魅难解的困惑以及表面上的调查结果。故事的高潮在汤川学开始调查之后展开，并最终通过科学的分析找到隐藏在表象下的真相，解开悬疑和鬼魅的事件之后，反转了剧情。&lt;/p&gt;
 
 &lt;p&gt;我觉得从推理的过程上来看，这几篇短篇并没有特别的地方，很符合东野圭吾的一贯写法，只是把所有的事情都在紧凑的推理中迅速的完结了。只是除了第一篇『预知梦』之外，我几乎难以感受到看《恶意》，《嫌疑人X》的深深的震撼，更难以和《白夜行》相提并论。在看到『骚灵』和『鬼火之谜』的时候，我甚至开始有点怀疑文中所谓物理，科学的部分，因为提到的共振有点太过巧合，弓弦被电烙铁烧断的那部分也很令人难以信服。&lt;/p&gt;
