@@ -1,24 +1,33 @@
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-# permalink:           pretty
+permalink: pretty
 # relative_permalinks: true
 
 # Setup
-title:               Life is short
-tagline:             'This doodler'
-description:         'Hey, I am Ryan!'
-url:                 http://ryancat.github.io
-# url:                 http://localhost
-baseurl:             ''
-paginate:            2
+title: Life is short
+tagline: 'This doodler'
+description: 'Hey, I am Ryan!'
+
+# url: ryancat.github.io
+url: localhost
+baseurl: ''
+paginate: 2
 
 # About/contact
-author:
-  name:              Ryan Chen
-  url:               https://www.linkedin.com/in/xchan
-  email:             xryanchen@gmail.com
+author: 
+  name: Ryan Chen
+  url: https://www.linkedin.com/in/xchan
+  email: xryanchen@gmail.com
+
+# Style
+sass: 
+  style: compressed
+
+# Github
+github:
+  repo: https://github.com/ryancat
 
 # Custom vars
-version:             1.0.0
-gem:                 jekyll-paginate
+version: 1.0.0
+gem: jekyll-paginate
