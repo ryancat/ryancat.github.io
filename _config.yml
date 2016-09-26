@@ -28,6 +28,13 @@ sass:
 github:
   repo: https://github.com/ryancat
 
+# Comments
+comments:
+  provider: disqus
+
+disqus:
+  short_name: ryancat
+
 # Custom vars
 version: 1.0.0
 gem: jekyll-paginate
