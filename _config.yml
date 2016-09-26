@@ -5,8 +5,8 @@ permalink: pretty
 # relative_permalinks: true
 
 # Setup
-title: Life is short
-tagline: 'This doodler'
+title: Ryan's brain
+tagline: ''
 description: 'Hey, I am Ryan!'
 
 # url: ryancat.github.io
@@ -15,13 +15,13 @@ baseurl: ''
 paginate: 2
 
 # About/contact
-author: 
+author:
   name: Ryan Chen
   url: https://www.linkedin.com/in/xchan
   email: xryanchen@gmail.com
 
 # Style
-sass: 
+sass:
   style: compressed
 
 # Github
