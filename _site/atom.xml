@@ -4,7 +4,7 @@
  <title>Ryan's brain</title>
  <link href="localhost/atom.xml" rel="self"/>
  <link href="localhost/"/>
- <updated>2017-10-08T00:51:07-07:00</updated>
+ <updated>2017-10-08T10:20:41-07:00</updated>
  <id>localhost</id>
  <author>
    <name>Ryan Chen</name>
@@ -13,7 +13,7 @@
 
  
  <entry>
-   <title>snake</title>
+   <title>Snake</title>
    <link href="localhost/2017/10/06/snake/"/>
    <updated>2017-10-06T00:00:00-07:00</updated>
    <id>localhost/2017/10/06/snake</id>

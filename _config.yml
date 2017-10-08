@@ -9,8 +9,8 @@ title: Ryan's brain
 tagline: ''
 description: 'Hey, I am Ryan!'
 
-# url: ryancat.github.io
-url: localhost
+url: ryancat.github.io
+# url: localhost
 baseurl: ''
 paginate: 2
 
