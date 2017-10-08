@@ -14,7 +14,9 @@ title: Home
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
+    {% if post.layout == 'post' %}
     {{ post.content }}
+    {% endif %}
   </div>
   {% endfor %}
 </div>

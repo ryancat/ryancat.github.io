@@ -1,5 +1,6 @@
 --- 
 layout: demo
+title: checkmake
 ---
 <div id="root"></div>
 
