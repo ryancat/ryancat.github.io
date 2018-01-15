@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Ryan's brain</title>
- <link href="localhost/atom.xml" rel="self"/>
- <link href="localhost/"/>
- <updated>2017-10-09T09:46:27-07:00</updated>
- <id>localhost</id>
+ <link href="https://ryancat.github.io/atom.xml" rel="self"/>
+ <link href="https://ryancat.github.io/"/>
+ <updated>2018-01-14T22:34:19-08:00</updated>
+ <id>https://ryancat.github.io</id>
  <author>
    <name>Ryan Chen</name>
    <email>xryanchen@gmail.com</email>
@@ -13,10 +13,88 @@
 
  
  <entry>
+   <title>JS Inspector</title>
+   <link href="https://ryancat.github.io/2018/01/14/jsinspector/"/>
+   <updated>2018-01-14T00:00:00-08:00</updated>
+   <id>https://ryancat.github.io/2018/01/14/jsinspector</id>
+   <content type="html">&lt;style&gt;
+  #jsinspectorApp {
+    margin: 20px;
+  }
+
+  #editor {
+    width: 100%;
+    min-width: 500px;
+    height: 500px;
+    max-height: 800px;
+    border: 1px solid #c3c3c3;
+    outline: none;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+
+  #inspectBtn {
+    width: 150px;
+    position: relative;
+    left: 50%;
+    line-height: 30px;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transform: translateX(-50%);
+  }
+
+  .description {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: monospace;
+    font-size: 12px;
+  }
+&lt;/style&gt;
+
+&lt;div id=&quot;jsinspectorApp&quot;&gt;
+  &lt;div id=&quot;editor&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;description&quot;&gt;
+    &lt;span&gt;Please open your browser&#39;s dev tools, as well as active breakpoints&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;button id=&quot;inspectBtn&quot;&gt;Inspect&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+  // Config ace editor
+  var editor = ace.edit(&#39;editor&#39;);
+  editor.session.setMode(&quot;ace/mode/javascript&quot;);
+  editor.setTheme(&quot;ace/theme/tomorrow&quot;);
+
+  // Config inspect behavior. 
+  // This will trigger browser inspector.
+  var inspectBtn = document.getElementById(&#39;inspectBtn&#39;);
+  inspectBtn.addEventListener(&#39;click&#39;, function () {
+    var content = editor.getValue();
+    // TODO: Avoid nested eval
+    // TODO: Undo and Redo
+    
+    // It&#39;s ok to use eval as this will be a static page
+    eval(
+      &#39;// Start debug your javascript...\n&#39;
+      + &#39;debugger;\n\n&#39; 
+      + content);
+  });
+&lt;/script&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
    <title>Snake</title>
-   <link href="localhost/2017/10/06/snake/"/>
+   <link href="https://ryancat.github.io/2017/10/06/snake/"/>
    <updated>2017-10-06T00:00:00-07:00</updated>
-   <id>localhost/2017/10/06/snake</id>
+   <id>https://ryancat.github.io/2017/10/06/snake</id>
    <content type="html">&lt;div id=&quot;root&quot;&gt;
   &lt;h2&gt;Snake by gamux&lt;/h2&gt;
   &lt;a href=&quot;https://github.com/ryancat/gamux&quot;&gt;Check it on github&lt;/a&gt;
@@ -31,9 +109,9 @@
  
  <entry>
    <title>checkmake</title>
-   <link href="localhost/2017/09/13/checkmate/"/>
+   <link href="https://ryancat.github.io/2017/09/13/checkmate/"/>
    <updated>2017-09-13T00:00:00-07:00</updated>
-   <id>localhost/2017/09/13/checkmate</id>
+   <id>https://ryancat.github.io/2017/09/13/checkmate</id>
    <content type="html">&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
 
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/demo.css&quot; /&gt;
@@ -45,9 +123,9 @@
  
  <entry>
    <title>知日</title>
-   <link href="localhost/chinese%20book-review/2016/09/27/%E7%9F%A5%E6%97%A5/"/>
+   <link href="https://ryancat.github.io/chinese%20book-review/2016/09/27/%E7%9F%A5%E6%97%A5/"/>
    <updated>2016-09-27T00:00:00-07:00</updated>
-   <id>localhost/chinese%20book-review/2016/09/27/知日</id>
+   <id>https://ryancat.github.io/chinese%20book-review/2016/09/27/知日</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/public/images/s27245019.jpg&quot; alt=&quot;知日 封面&quot; /&gt;
 &lt;em&gt;封面转载自豆瓣网&lt;/em&gt;&lt;/p&gt;
 
@@ -94,9 +172,9 @@
  
  <entry>
    <title>预知梦</title>
-   <link href="localhost/chinese%20book-review/2016/09/24/%E9%A2%84%E7%9F%A5%E6%A2%A6/"/>
+   <link href="https://ryancat.github.io/chinese%20book-review/2016/09/24/%E9%A2%84%E7%9F%A5%E6%A2%A6/"/>
    <updated>2016-09-24T00:00:00-07:00</updated>
-   <id>localhost/chinese%20book-review/2016/09/24/预知梦</id>
+   <id>https://ryancat.github.io/chinese%20book-review/2016/09/24/预知梦</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/public/images/s5676768.jpg&quot; alt=&quot;预知梦 封面&quot; /&gt;
 &lt;em&gt;封面转载自豆瓣网&lt;/em&gt;&lt;/p&gt;
 
