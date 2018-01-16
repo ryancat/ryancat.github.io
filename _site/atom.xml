@@ -4,7 +4,7 @@
  <title>Ryan's brain</title>
  <link href="https://ryancat.github.io/atom.xml" rel="self"/>
  <link href="https://ryancat.github.io/"/>
- <updated>2018-01-14T22:34:19-08:00</updated>
+ <updated>2018-01-16T01:00:18-08:00</updated>
  <id>https://ryancat.github.io</id>
  <author>
    <name>Ryan Chen</name>
@@ -17,75 +17,29 @@
    <link href="https://ryancat.github.io/2018/01/14/jsinspector/"/>
    <updated>2018-01-14T00:00:00-08:00</updated>
    <id>https://ryancat.github.io/2018/01/14/jsinspector</id>
-   <content type="html">&lt;style&gt;
-  #jsinspectorApp {
-    margin: 20px;
-  }
-
-  #editor {
-    width: 100%;
-    min-width: 500px;
-    height: 500px;
-    max-height: 800px;
-    border: 1px solid #c3c3c3;
-    outline: none;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-  }
-
-  #inspectBtn {
-    width: 150px;
-    position: relative;
-    left: 50%;
-    line-height: 30px;
-    font-family: monospace;
-    font-weight: bold;
-    font-size: 14px;
-    cursor: pointer;
-    transform: translateX(-50%);
-  }
-
-  .description {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
-    font-family: monospace;
-    font-size: 12px;
-  }
-&lt;/style&gt;
+   <content type="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;/dist/jsinspector.css&quot; /&gt;
 
 &lt;div id=&quot;jsinspectorApp&quot;&gt;
   &lt;div id=&quot;editor&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;toolbar&quot;&gt;
+    &lt;div class=&quot;toobarItem toolbarBreakpoint&quot;&gt;
+      &lt;button class=&quot;toolbarBreakpointBtn toDisable&quot;&gt;Disable Breakpoints&lt;/button&gt;
+      &lt;button class=&quot;toolbarBreakpointBtn toEnable&quot;&gt;Enable Breakpoints&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;toolbox&quot;&gt;
+    &lt;ul class=&quot;toolboxBreakpointLines&quot;&gt;&lt;/ul&gt;
+  &lt;/div&gt;
   &lt;div class=&quot;description&quot;&gt;
     &lt;span&gt;Please open your browser&#39;s dev tools, as well as active breakpoints&lt;/span&gt;
   &lt;/div&gt;
   &lt;button id=&quot;inspectBtn&quot;&gt;Inspect&lt;/button&gt;
+  &lt;div id=&quot;evalResult&quot; class=&quot;description&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js&quot;&gt;&lt;/script&gt;
 
-&lt;script type=&quot;text/javascript&quot;&gt;
-  // Config ace editor
-  var editor = ace.edit(&#39;editor&#39;);
-  editor.session.setMode(&quot;ace/mode/javascript&quot;);
-  editor.setTheme(&quot;ace/theme/tomorrow&quot;);
-
-  // Config inspect behavior. 
-  // This will trigger browser inspector.
-  var inspectBtn = document.getElementById(&#39;inspectBtn&#39;);
-  inspectBtn.addEventListener(&#39;click&#39;, function () {
-    var content = editor.getValue();
-    // TODO: Avoid nested eval
-    // TODO: Undo and Redo
-    
-    // It&#39;s ok to use eval as this will be a static page
-    eval(
-      &#39;// Start debug your javascript...\n&#39;
-      + &#39;debugger;\n\n&#39; 
-      + content);
-  });
-&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/dist/jsinspector.js&quot;&gt;&lt;/script&gt;
 
 </content>
  </entry>

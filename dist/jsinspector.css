@@ -1,0 +1,119 @@
+#jsinspectorApp {
+  margin: 20px; }
+
+#editor {
+  width: 100%;
+  min-width: 300px;
+  height: 500px;
+  max-height: 800px;
+  border: 1px solid #c3c3c3;
+  outline: none;
+  margin-bottom: 20px;
+  box-sizing: border-box; }
+
+#inspectBtn {
+  width: 150px;
+  position: relative;
+  left: 50%;
+  line-height: 30px;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transform: translateX(-50%);
+  margin-bottom: 20px; }
+
+.description {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: monospace;
+  font-size: 12px; }
+
+.result {
+  color: green;
+  border: 1px solid green;
+  padding: 5px; }
+  .result.error {
+    color: red;
+    border: 1px solid red; }
+
+.ace_gutter-cell {
+  position: relative;
+  cursor: pointer; }
+  .ace_gutter-cell.ace_breakpoint::before {
+    position: absolute;
+    left: -9px;
+    content: ' \25CF';
+    line-height: 15px;
+    font-size: 21px;
+    color: #d80000;
+    font-family: monospace; }
+  .ace_gutter-cell.ace_breakpoint.disabled::before {
+    color: #880000; }
+
+.toolbar {
+  display: flex;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #c3c3c3; }
+
+.toobarItem {
+  width: 100%; }
+
+.toolbarBreakpointBtn {
+  position: relative;
+  height: 20px;
+  line-height: 15px;
+  font-family: monospace;
+  font-size: 12px;
+  padding-left: 17px;
+  box-sizing: border-box;
+  cursor: pointer; }
+  .toolbarBreakpointBtn::before {
+    position: absolute;
+    left: 2px;
+    content: ' \25CF';
+    font-size: 21px;
+    color: #d80000; }
+  .toolbarBreakpointBtn.toDisable::before {
+    color: #880000; }
+  .toolbarBreakpointBtn.toEnable {
+    display: none; }
+
+.toolboxBreakpointLines {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 10px;
+  font-family: monospace; }
+
+.breakpointLine {
+  position: relative;
+  display: flex;
+  border: 1px solid #d80000;
+  margin-bottom: 5px;
+  cursor: pointer; }
+  .breakpointLine:hover .breakpointLineClose::before {
+    content: '\D7';
+    font-size: 21px;
+    line-height: 21px; }
+
+.breakpointLineNumber {
+  min-width: 35px;
+  padding: 3px;
+  padding-right: 10px;
+  background-color: #f6f6f6;
+  text-align: right; }
+
+.breakpointLineContent {
+  padding: 3px; }
+  .breakpointLineContent pre {
+    margin: 0; }
+
+.breakpointLineClose {
+  position: absolute;
+  width: 16px;
+  height: 100%;
+  right: 0; }

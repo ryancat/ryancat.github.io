@@ -1,3 +1,6 @@
 # Auto generated site
 _site
 .sass-cache
+
+# log files
+npm-debug.log
