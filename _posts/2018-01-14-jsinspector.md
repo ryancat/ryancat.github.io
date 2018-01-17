@@ -22,7 +22,10 @@ ogTitle: JS Inspector
   <div class="description">
     <span>Please open your browser's dev tools, as well as active breakpoints</span>
   </div>
-  <button id="inspectBtn">Inspect</button>
+  <div class="mainInteraction">
+    <button id="inspectBtn" class="primary">Inspect</button>
+    <button id="perfBtn" class="primary">Perf Test</button>
+  </div>
   <div id="evalResult" class="description"></div>
 </div>
 

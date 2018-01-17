@@ -1,3 +1,13 @@
+button.primary {
+  width: 150px;
+  position: relative;
+  line-height: 30px;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px; }
+
 #jsinspectorApp {
   margin: 20px; }
 
@@ -10,18 +20,6 @@
   outline: none;
   margin-bottom: 20px;
   box-sizing: border-box; }
-
-#inspectBtn {
-  width: 150px;
-  position: relative;
-  left: 50%;
-  line-height: 30px;
-  font-family: monospace;
-  font-weight: bold;
-  font-size: 14px;
-  cursor: pointer;
-  transform: translateX(-50%);
-  margin-bottom: 20px; }
 
 .description {
   position: relative;
@@ -122,3 +120,7 @@
       color: red; }
   #evalResult .old {
     opacity: 0.4; }
+
+.mainInteraction {
+  display: flex;
+  justify-content: space-around; }

@@ -146,6 +146,9 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
+// Performance test duration is about 3s
+var PERF_DURATION = 3000;
+
 var App =
 /*#__PURE__*/
 function (_Base) {
@@ -165,7 +168,8 @@ function (_Base) {
     _this.console = new _Console.default({
       editor: _this.editor
     });
-    _this.inspectBtn = document.getElementById('inspectBtn'); // Config inspect behavior. 
+    _this.inspectBtn = document.getElementById('inspectBtn');
+    _this.perfBtn = document.getElementById('perfBtn'); // Config inspect behavior. 
     // This will trigger browser inspector.
     // let inspectBtn = document.getElementById('inspectBtn');
 
@@ -211,11 +215,49 @@ function (_Base) {
         try {
           _this2.console.addLog('>>> ' + eval(evalContent));
         } catch (e) {
-          _this2.console.addError('>>> Your javascript code has error(s)');
+          _this2.console.addError('>>> ' + e.message);
         } // Restore console.log
 
 
         console.log = oldConsoleLog;
+      });
+      this.perfBtn.addEventListener('click', function () {
+        var editor = _this2.editor.aceEditor,
+            content = editor.getValue(),
+            hasError = false,
+            totalDuration = 0,
+            singleDuration,
+            runCount,
+            runCountIter;
+
+        _this2.console.startNewLog(); // Perf test will evalute run time by average
+
+
+        try {
+          singleDuration = window.performance.now();
+          eval(content);
+          singleDuration = window.performance.now() - singleDuration;
+        } catch (e) {
+          _this2.console.addError('>>> ' + e.message);
+
+          hasError = true;
+        }
+
+        if (hasError) {
+          return;
+        }
+
+        runCount = Math.floor(PERF_DURATION / singleDuration);
+        runCountIter = runCount;
+
+        while (runCountIter--) {
+          singleDuration = window.performance.now();
+          eval(content);
+          singleDuration = window.performance.now() - singleDuration;
+          totalDuration += singleDuration;
+        }
+
+        _this2.console.addLog('[Average duration for ' + runCount + ' runs] ' + totalDuration / runCount * 1000 + ' ms');
       });
     }
   }]);
