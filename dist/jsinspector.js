@@ -182,7 +182,6 @@ function (_Base) {
       this.inspectBtn.addEventListener('click', function () {
         var editor = _this2.editor.aceEditor,
             lineContents = editor.getValue().split('\n'),
-            result = '',
             evalContent; // TODO: Avoid nested eval
         // TODO: Undo and Redo
 
@@ -210,15 +209,13 @@ function (_Base) {
 
 
         try {
-          eval(evalContent);
+          _this2.console.addLog('>>> ' + eval(evalContent));
         } catch (e) {
-          _this2.console.resultElement.innerHTML = '<pre class="result error">Your javascript code has error(s)</pre>';
+          _this2.console.addError('>>> Your javascript code has error(s)');
         } // Restore console.log
 
 
-        console.log = oldConsoleLog; // if (this.console.resultElement.innerHTML === '') {
-        //   this.console.resultElement.innerHTML = '<pre class="result">' + result + '</pre>'
-        // }
+        console.log = oldConsoleLog;
       });
     }
   }]);
@@ -541,6 +538,11 @@ function (_Base) {
     key: "addLog",
     value: function addLog(log) {
       this.resultElement.innerHTML += '<pre class="result">' + log + '</pre>';
+    }
+  }, {
+    key: "addError",
+    value: function addError(error) {
+      this.resultElement.innerHTML += '<pre class="result error">' + error + '</pre>';
     }
   }, {
     key: "clearLog",
