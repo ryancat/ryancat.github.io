@@ -5,7 +5,7 @@
   width: 100%;
   min-width: 300px;
   height: 500px;
-  max-height: 800px;
+  max-height: 1000px;
   border: 1px solid #c3c3c3;
   outline: none;
   margin-bottom: 20px;
@@ -30,14 +30,6 @@
   margin-bottom: 10px;
   font-family: monospace;
   font-size: 12px; }
-
-.result {
-  color: green;
-  border: 1px solid green;
-  padding: 5px; }
-  .result.error {
-    color: red;
-    border: 1px solid red; }
 
 .ace_gutter-cell {
   position: relative;
@@ -117,3 +109,16 @@
   width: 16px;
   height: 100%;
   right: 0; }
+
+#evalResult {
+  text-align: left;
+  border: 1px solid #c3c3c3;
+  min-height: 50px;
+  max-height: 500px;
+  overflow: auto; }
+  #evalResult .result {
+    margin: 5px 10px; }
+    #evalResult .result.error {
+      color: red; }
+  #evalResult .old {
+    opacity: 0.4; }
