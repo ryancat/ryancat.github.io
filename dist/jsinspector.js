@@ -257,7 +257,7 @@ function (_Base) {
           totalDuration += singleDuration;
         }
 
-        _this2.console.addLog('[Average duration for ' + runCount + ' runs] ' + totalDuration / runCount * 1000 + ' ms');
+        _this2.console.addLog('[Average duration for ' + runCount + ' runs] ' + totalDuration / runCount + ' ms');
       });
     }
   }]);
