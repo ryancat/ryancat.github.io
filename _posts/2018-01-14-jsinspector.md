@@ -9,11 +9,13 @@ ogTitle: JS Inspector
 <link rel="stylesheet" href="/dist/jsinspector.css">
 
 <div id="jsinspectorApp">
-  <div id="editor"></div>
+  <div id="editors">
+    <div class="editorTabs tabs"></div>
+  </div>
   <div class="toolbar">
     <div class="toobarItem toolbarBreakpoint">
-      <button class="toolbarBreakpointBtn toDisable">Disable Breakpoints</button>
-      <button class="toolbarBreakpointBtn toEnable">Enable Breakpoints</button>
+      <button class="toolbarBreakpointBtn toDisable secondary">Disable Breakpoints</button>
+      <button class="toolbarBreakpointBtn toEnable secondary">Enable Breakpoints</button>
     </div>
   </div>
   <div class="toolbox">
@@ -24,9 +26,15 @@ ogTitle: JS Inspector
   </div>
   <div class="mainInteraction">
     <button id="inspectBtn" class="primary">Inspect</button>
-    <button id="perfBtn" class="primary">Perf Test</button>
+    <button id="perfBtn" class="primary">Perf Test (3s)</button>
   </div>
-  <div id="evalResult" class="description"></div>
+  <div id="console" class="description">
+    <div class="toolBar">
+      <button class="secondary toClear">Clear</button>
+      <div class="editorTabs tabs"></div>
+    </div>
+    <div class="content"></div>
+  </div>
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js"></script>
