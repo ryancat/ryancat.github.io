@@ -1,10 +1,10 @@
 --- 
 layout: demo
-title: Three Gems
+title: Gem of truth
 ogDescription: Solve the maze, kill the monsters, and bring back gems!
 # ogImage: /dist/snake_thumbnail.png
-ogTitle: Three Gems
+ogTitle: Gem of truth
 ---
 <div id="root"></div>
 
-<script type="text/javascript" src="/dist/threeGems.js"></script>
+<script type="text/javascript" src="/dist/gemOfTruth.js"></script>
